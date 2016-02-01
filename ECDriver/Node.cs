@@ -23,13 +23,9 @@ namespace DXDriver.Core
 		/// <summary>
 		/// 新建节点
 		/// </summary>
-		public Node()
+		public Node(Microsoft.DirectX.Direct3D.Device d3dDevice)
 		{
-			sprite = null;
-			if (Director.getInstance() != null)
-			{
-				sprite = new Sprite(Director.getInstance().D3dDevice);
-			}
+			sprite = new Sprite(d3dDevice);
 		}
 
 		/// <summary>

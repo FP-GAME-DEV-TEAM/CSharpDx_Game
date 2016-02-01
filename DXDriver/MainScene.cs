@@ -7,7 +7,7 @@ namespace DXDriver
 {
 	public class MainScene : Scene
 	{
-		public MainScene() : base()
+		public MainScene() : base(Director.getInstance().D3dDevice)
 		{
 
 		}

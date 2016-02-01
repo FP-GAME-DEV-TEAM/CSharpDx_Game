@@ -15,12 +15,14 @@ namespace DXDriver.Core
 	public abstract class Scene : IDisposable
 	{
 		protected List<Layer> arrLayer = null;
+		protected Microsoft.DirectX.Direct3D.Device d3dDevice;
 
 		/// <summary>
 		/// 初始化场景
 		/// </summary>
-		public Scene()
+		public Scene(Microsoft.DirectX.Direct3D.Device device)
 		{
+			this.d3dDevice = device;  
 			arrLayer = new List<Layer>();
 		}
 
@@ -52,15 +54,14 @@ namespace DXDriver.Core
 		public bool Draw()
 		{
 			bool flag = true;
-			Microsoft.DirectX.Direct3D.Device d3dDevice = Director.getInstance().D3dDevice;
-			if (d3dDevice != null)
+			if (this.d3dDevice != null)
 			{
-				d3dDevice.BeginScene();
+				this.d3dDevice.BeginScene();
 				foreach (var layer in arrLayer)
 				{
 					layer.Draw();
 				}
-				d3dDevice.EndScene();
+				this.d3dDevice.EndScene();
 			}
 			else
 			{
