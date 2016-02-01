@@ -12,8 +12,8 @@ namespace ECDriver
 	{
 		private static void Log(string str)
 		{
-			string dir = DefaultConfig.LogFolder;
-			string ext = DefaultConfig.LogFileExt;
+			string dir = @".\Logs\";
+			string ext = @".log";
 			//使用当前时间作为log文件名
 			DateTime dt = DateTime.Now;
 			string filename = dt.ToString("yyyyMMdd_hhmmss");

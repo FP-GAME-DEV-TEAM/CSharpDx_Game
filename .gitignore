@@ -11,3 +11,12 @@ ECDriver.Utils/bin/Release/ECDriver.Utils.dll
 .vs/DXDriver/v14/.suo
 DXDriver.sdf
 DXDriver.sln
+DXDriver/bin/Debug/DXDriver.vshost.exe.config
+DXDriver/bin/Debug/ECDriver.dll
+*.dll
+*.xml
+ECDriver.Utils/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+*.txt
+DXDriver/bin/Release/DXDriver.exe.config
+DXDriver/bin/Release/DXDriver.vshost.exe.config

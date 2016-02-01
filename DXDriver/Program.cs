@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 using ECDriver;
 using ECDriver.Utils;
+using DXDriver.Core;
 
 namespace DXDriver
 {
@@ -19,12 +20,8 @@ namespace DXDriver
 					ErrorReport.New("初始化DirectX失败！");
 					return;
 				}
-				AnimationLoader.aaa();
 
 				director.Show();
-
-				MainScene scene = new MainScene();
-				Director.getInstance().PerformScene(scene);
 
 				TimerUtils.Init();
 				while (director.Created)

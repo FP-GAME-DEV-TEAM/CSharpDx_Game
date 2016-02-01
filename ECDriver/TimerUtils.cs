@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-
 namespace ECDriver
 {
 	/// <summary>
@@ -27,10 +26,16 @@ namespace ECDriver
 		public static bool Start(float interval, int count, string key, TimerCallBackHandle func)
 		{
 			Clock ck = new Clock();
-			ck.Start(interval, count, func);
-
-			if (!mapClock.ContainsKey(key)) mapClock.Add(key, ck);
-			else return false;
+			
+			if (!mapClock.ContainsKey(key))
+			{
+				mapClock.Add(key, ck);
+				ck.Start(interval, count, func);
+			}
+			else
+			{
+				return false;
+			}
 
 			return true;
 		}

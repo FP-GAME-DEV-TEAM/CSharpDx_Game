@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Microsoft.DirectX;
 using Microsoft.DirectX.Direct3D;
 
-namespace ECDriver
+namespace DXDriver.Core
 {
 	/// <summary>
 	/// 默认配置类

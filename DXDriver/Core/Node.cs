@@ -6,14 +6,14 @@ using Microsoft.DirectX.Direct3D;
 using Microsoft.DirectX.DirectInput;
 using Microsoft.DirectX.DirectSound;
 
-namespace ECDriver
+namespace DXDriver.Core
 {
 	/// <summary>
 	/// 基础节点类 
 	/// 游戏中描述可被显示的类都应该继承此类
 	/// 例如：单位 英雄 地图 场景物件等
 	/// </summary>
-	public abstract class Node : IDrawable
+	public abstract class Node
 	{
 		/// <summary>
 		/// 节点精灵

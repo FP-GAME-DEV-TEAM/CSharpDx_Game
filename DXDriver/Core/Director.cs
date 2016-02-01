@@ -9,8 +9,9 @@ using Microsoft.DirectX.Direct3D;
 using Microsoft.DirectX.DirectInput;
 using Microsoft.DirectX.DirectSound;
 
+using ECDriver;
 
-namespace ECDriver
+namespace DXDriver.Core
 {
 	/// <summary>
 	/// 导演类
@@ -39,7 +40,7 @@ namespace ECDriver
 		{
 			//this.Size = new Size(DefaultConfig.WndWidth, DefaultConfig.WndHeight);
 			this.Size = new Size(1024, 720);
-			this.Text = DefaultConfig.WndTitle + @" v1.0 开发版";
+			this.Text = @"dx v1.0 开发版";
 			this.FormBorderStyle = FormBorderStyle.Fixed3D;
 			this.MaximizeBox = false;
 			//this.Icon = new Icon(@"icon.ico"); 
@@ -78,7 +79,7 @@ namespace ECDriver
 				instance = this;
 
 				//设置每帧时间间隔
-				PerFrameTick = 1000.0f / DefaultConfig.GameFPS;
+				PerFrameTick = 1000.0f / 60;
 				
 				return true;
 			}

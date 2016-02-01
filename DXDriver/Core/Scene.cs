@@ -7,12 +7,12 @@ using Microsoft.DirectX.Direct3D;
 using Microsoft.DirectX.DirectInput;
 using Microsoft.DirectX.DirectSound;
 
-namespace ECDriver
+namespace DXDriver.Core
 {
 	/// <summary>
 	/// 场景类
 	/// </summary>
-	public abstract class Scene : IDrawable, IDisposable
+	public abstract class Scene : IDisposable
 	{
 		protected List<Layer> arrLayer = null;
 
@@ -52,22 +52,15 @@ namespace ECDriver
 		public bool Draw()
 		{
 			bool flag = true;
-			if (Director.getInstance() != null)
+			Microsoft.DirectX.Direct3D.Device d3dDevice = Director.getInstance().D3dDevice;
+			if (d3dDevice != null)
 			{
-				Microsoft.DirectX.Direct3D.Device d3dDevice = Director.getInstance().D3dDevice;
-				if (d3dDevice != null)
+				d3dDevice.BeginScene();
+				foreach (var layer in arrLayer)
 				{
-					d3dDevice.BeginScene();
-					foreach (var layer in arrLayer)
-					{
-						layer.Draw();
-					}
-					d3dDevice.EndScene();
+					layer.Draw();
 				}
-				else
-				{
-					flag = false;
-				}
+				d3dDevice.EndScene();
 			}
 			else
 			{

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ECDriver
+namespace DXDriver.Core
 {
 	/// <summary>
 	/// 场景中的层
 	/// </summary>
-	public class Layer : IDrawable
+	public class Layer
 	{
 		private List<Node> arrNode = null;
 
