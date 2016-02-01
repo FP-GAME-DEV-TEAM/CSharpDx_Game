@@ -7,3 +7,7 @@ DXDriver/bin/Debug/DXDriver.exe.config
 DXDriver/bin/Release/Microsoft.DirectX.xml
 DXDriver/bin/Release/Microsoft.DirectX.DirectSound.xml
 DXDriver/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+ECDriver.Utils/bin/Release/ECDriver.Utils.dll
+.vs/DXDriver/v14/.suo
+DXDriver.sdf
+DXDriver.sln
