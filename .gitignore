@@ -1,0 +1,9 @@
+DXDriver/bin/Debug/DXDriver.exe
+DXDriver/bin/Debug/DXDriver.exe.config
+*.pdb
+*.manifest
+*.log
+*.exe
+DXDriver/bin/Release/Microsoft.DirectX.xml
+DXDriver/bin/Release/Microsoft.DirectX.DirectSound.xml
+DXDriver/obj/Debug/DesignTimeResolveAssemblyReferences.cache
