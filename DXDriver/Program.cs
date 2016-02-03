@@ -23,6 +23,8 @@ namespace DXDriver
 
 				director.Show();
 
+				AnimationLoader.aaa();
+
 				TimerUtils.Init();
 				while (director.Created)
 				{
